@@ -1,0 +1,24 @@
+﻿<Window x:Class="ActividadesUT2_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ActividadesUT2_2"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="500" Width="800"
+        Icon="icon.ico">
+    <Grid>
+        <TextBlock Width="150" Height="40" FontSize="25" Text="Operando 1" Margin="109,106,533,323"/>
+        <TextBlock Width="150" Height="40" FontSize="25" Text="Operando 2" Margin="109,171,533,258"/>
+        <TextBlock Width="150" Height="40" FontSize="25" Text="Operador" Margin="109,243,533,186"/>
+        <TextBlock Width="150" Height="40" FontSize="25" Text="Resultado" Margin="109,312,533,117"/>
+
+        <TextBox x:Name="OperandoUno_TextBox" BorderThickness="2" Width="150" Height="40" Margin="297,106,345,323"/>
+        <TextBox x:Name="OperandoDos_TextBox" BorderThickness="2" Width="150" Height="40" Margin="297,171,345,258"/>
+        <TextBox x:Name="Operador_TextBox" TextChanged="ComprobarEstado" BorderThickness="2" Width="150" Height="40" Margin="297,243,345,186"/>
+        <TextBox x:Name="Resultado_TextBox" IsReadOnly="True" BorderThickness="2" Width="150" Height="40" Margin="297,312,345,117"/>
+
+        <Button IsEnabled="False" FontSize="28" Content="Calcular" Width="150" Height="40" Margin="515,106,127,323" Name="Calcular_Button" Click="ClickCalcular_Button"/>
+        <Button FontSize="28" Content="Limpiar" Width="150" Height="40" Margin="515,171,127,258" Name="Limpiar_Button" Click="ClickLimpiar_Button"/>
+    </Grid>
+</Window>
